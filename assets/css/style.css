@@ -1053,6 +1053,7 @@ body {
 .contact__body form .single__select select {
   width: 100%;
   border-radius: 10px;
+  -webkit-border-radius: 10px; /* Safari prefix */
   border: 1px solid #cecece;
   padding: 10px 20px;
   font-size: 14px;
@@ -1061,10 +1062,14 @@ body {
   outline: none;
   background: transparent;
 }
+
 .contact__body form .single__select select {
   background: #251d68;
   color: #6e6c6e;
+  -webkit-background-color: #251d68; /* Safari prefix */
+  -webkit-color: #6e6c6e; /* Safari prefix */
 }
+
 .contact__body form .single__submit {
   width: 100%;
   max-width: 312px;
@@ -1133,4 +1138,20 @@ body {
 }
 .contact__socail ul li a img {
   max-width: 50px;
+}
+
+/* social chat button  */
+
+.btn--messenger {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background: #2ecc71;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+}
+.btn--messenger:hover {
+  border: 1px solid #2ecc71;
 }

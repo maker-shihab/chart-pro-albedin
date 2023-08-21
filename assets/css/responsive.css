@@ -14,6 +14,13 @@
     right: -60px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .why__items .why__card:nth-of-type(odd) {
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+  }
+}
 @media screen and (max-width: 1200px) {
   .hero_wrapper {
     height: 540px;
@@ -206,6 +213,11 @@
   .contact__body form .single__submit {
     margin-top: 50px;
   }
+  .why__items .why__card:nth-of-type(odd) {
+    -webkit-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
 }
 @media screen and (max-width: 767px) {
   .class__boxText {
@@ -335,6 +347,8 @@
     font-size: 20px;
   }
   .reviews__ratings {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
   .reviews__card {
@@ -348,6 +362,8 @@
     padding: 15px 0px 20px 0px;
   }
   .reviews__profile {
+    -webkit-column-gap: 7px;
+    -moz-column-gap: 7px;
     column-gap: 7px;
   }
   .profile__thumb {
@@ -360,6 +376,9 @@
   }
   .classes__items h2 {
     text-align: center;
+  }
+  .btn--messenger {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -446,6 +465,8 @@
     text-align: center;
   }
   .why__items .why__card:nth-of-type(odd) {
+    -webkit-transform: unset;
+    -ms-transform: unset;
     transform: unset;
   }
 }
