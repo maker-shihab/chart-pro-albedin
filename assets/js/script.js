@@ -19,7 +19,7 @@ $(document).ready(function () {
     responsiveClass: true,
     nav: false,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
    

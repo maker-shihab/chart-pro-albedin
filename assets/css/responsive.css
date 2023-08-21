@@ -1,7 +1,8 @@
-@media screen and (min-width: 576px) {
-}
+/* @media screen and (min-width: 576px) {
+} */
 @media screen and (min-width: 991px) {
   .header_nav {
+    display: -ms-grid !important;
     display: grid !important;
   }
 }
@@ -104,17 +105,31 @@
     height: auto;
     padding: 30px;
     background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     display: none;
   }
   .main_menu {
     row-gap: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .header_action {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-top: 25px;
   }
@@ -122,7 +137,10 @@
     display: block;
   }
   .header__area {
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .idea__wrapper::after {
@@ -151,9 +169,13 @@
     line-height: 30px;
   }
   .courses__items {
+    -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
   }
   .moto__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
   .moto__header .moto_dis {
@@ -161,8 +183,12 @@
     line-height: 28px;
   }
   .contact__body .from_input {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
     column-gap: 30px;
     row-gap: 30px;
     padding: 40px 132px 0;
@@ -190,7 +216,9 @@
     bottom: 0;
   }
   .classes__items {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     row-gap: 30px;
     position: relative;
@@ -213,12 +241,17 @@
   }
   .idea_card {
     padding-top: 55px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1.4fr 1fr;
     grid-template-columns: 1.4fr 1fr;
     position: relative;
     z-index: 99;
   }
   .why__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .why__header p {
@@ -244,6 +277,8 @@
     min-height: 100%;
   }
   .classes__rocket {
+    -webkit-transform: rotate(-20deg) translateY(0);
+    -ms-transform: rotate(-20deg) translateY(0);
     transform: rotate(-20deg) translateY(0);
     max-width: 350px;
     width: 100%;
@@ -276,9 +311,57 @@
   .faq__title h3 {
     font-size: 18px;
   }
+  .fixed__reting h2 {
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  .review__counter h3 span {
+    font-size: 30px;
+  }
+  .revies__counter_star span i {
+    font-size: 20px;
+  }
+  .review__counter p {
+    font-size: 15px;
+  }
+  .fixed__reting::after {
+    height: 150px;
+    top: 5px;
+    right: -23px;
+  }
+
+  .reviews__ratings span i {
+    font-size: 20px;
+  }
+  .reviews__ratings {
+    justify-content: space-evenly;
+  }
+  .reviews__card {
+    padding: 20px;
+  }
+  .reviews__text p {
+    padding: 0px 0;
+    line-height: 170.756%;
+  }
+  .reviews__card.active .reviews__text {
+    padding: 15px 0px 20px 0px;
+  }
+  .reviews__profile {
+    column-gap: 7px;
+  }
+  .profile__thumb {
+    height: 60px;
+    width: 60px;
+  }
+  .reviews {
+    padding: 70px 0;
+    padding-bottom: 0;
+  }
 }
 @media screen and (max-width: 576px) {
   .contact__body .from_input {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     row-gap: 30px;
   }
@@ -303,9 +386,11 @@
     right: -60px;
   }
   .idea_card {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   .courses__items {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   .faq__title h3 {
@@ -327,5 +412,16 @@
   .moto__header .moto_dis {
     font-size: 15px;
     padding-top: 15px;
+  }
+  .courses__card {
+    margin: 0 auto;
+  }
+  .profile__thumb {
+    height: 50px;
+    width: 50px;
+  }
+  .reviews {
+    padding: 50px 0;
+    padding-bottom: 0;
   }
 }
