@@ -7,8 +7,29 @@ $(document).ready(function () {
   });
   $('.main_menu li a').click(function () {
     $('.mobile__bar').removeClass('active');
-    $('.header_nav').slideUp(400);
-  })
+    $('.active_movile_menu').slideUp(400);
+  });
+  // Add mobile menu separate class when window screen in mobile 
+  const addMobileAciveClass = (width)=>{
+    if(width <= 991){
+      $('.header_nav').addClass('active_movile_menu')
+    }else{
+      if($('.header_nav').hasClass('active_movile_menu')){
+        $('.header_nav').removeClass('active_movile_menu');
+      }
+    }
+    // if(width <=767){
+    //   $('#messanger_button').html('Chat');
+    // }
+    // else{
+    //   $('#messanger_button').html('Chat with us');
+    // }
+  }
+  addMobileAciveClass($(window).width());
+  $(window).on('resize', function(e) {
+    addMobileAciveClass(e.delegateTarget.innerWidth);
+  });
+;
 
   // Navigation
   $('.reviews__slider').owlCarousel({
@@ -19,8 +40,8 @@ $(document).ready(function () {
     responsiveClass: true,
     nav: false,
     dots: false,
-    autoplay: false,
-    autoplayTimeout: 2000,
+    autoplay: true,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
    
     responsive: {
