@@ -1,5 +1,16 @@
 $(document).ready(function () {
-  
+  // Navigation
+  // HUMBERGAR
+  $(".mobile__bar").click(function () {
+    $(this).toggleClass("active");
+    $(".header_nav").slideToggle(400);
+  });
+  $('.main_menu li a').click(function () {
+    $('.mobile__bar').removeClass('active');
+    $('.header_nav').slideUp(400);
+  })
+
+  // Navigation
   $('.reviews__slider').owlCarousel({
     loop: true,
     margin: 10,
