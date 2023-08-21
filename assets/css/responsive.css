@@ -358,6 +358,9 @@
     padding: 70px 0;
     padding-bottom: 0;
   }
+  .classes__items h2 {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 576px) {
   .contact__body .from_input {
@@ -415,6 +418,7 @@
   }
   .courses__card {
     margin: 0 auto;
+    max-width: 100%;
   }
   .profile__thumb {
     height: 50px;
@@ -423,5 +427,25 @@
   .reviews {
     padding: 50px 0;
     padding-bottom: 0;
+  }
+  .classes {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .why__header {
+    padding-bottom: 55px;
+  }
+  .why__items {
+    grid-gap: 20px;
+    padding-top: 0px;
+  }
+  .why__card {
+    max-width: 100%;
+    text-align: center;
+  }
+  .why__items .why__card:nth-of-type(odd) {
+    transform: unset;
   }
 }
