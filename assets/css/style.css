@@ -97,6 +97,7 @@ section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol,
@@ -632,11 +633,10 @@ body {
   grid-template-columns: 3fr 1fr;
   grid-gap: 30px;
 }
-.reviews__slider {
-  /* display: grid; */
-  /* grid-template-columns: 1.2fr 1fr 1fr; */
-  column-gap: 30px;
-  align-items: flex-end;
+
+.al_slider_wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 .reviews__card {
   border-radius: 30px;
@@ -654,7 +654,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 212.756%;
-  padding: 15px 0;
+  padding: 25px 0;
 }
 .reviews__ratings {
   display: flex;
@@ -769,6 +769,11 @@ body {
 .reviews__card.active .profile_text h4,
 .reviews__card.active .profile_text p {
   color: #fff !important;
+}
+
+.reviews__wrapper .owl-stage {
+  display: flex;
+  align-items: flex-end;
 }
 /* / Moto /  */
 .moto {
