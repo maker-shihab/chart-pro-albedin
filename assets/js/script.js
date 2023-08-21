@@ -1,26 +1,46 @@
 $(document).ready(function () {
   
   $('.reviews__slider').owlCarousel({
+   
     loop: true,
     margin: 10,
     items: 3,
     responsiveClass: true,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+   
     responsive: {
       0: {
         items: 1,
-        nav: true
+        dots: true
       },
-      600: {
-        items: 3,
-        nav: false
+      900: {
+        items: 1,
+        
+        dots: true
       },
       1000: {
+        items: 2,
+      },
+      1300: {
         items: 3,
-        nav: true,
-        loop: false
       }
+    },
+    onChanged: handleSlideChange 
+  });
+  function handleSlideChange(event) {
+    if($('.owl-item.active').length != 0){
+      $('.reviews__card.active').removeClass('active');
+      $($('.owl-item')[event.item.index]).find('.reviews__card').addClass('active');
     }
-  })
+  }
+
+
+
+
   // Show the first content by default
   $(".faq__title:first").addClass("active").find("i").addClass("rotate");
   $(".faq__body:first").slideDown();
@@ -37,6 +57,7 @@ $(document).ready(function () {
       content.slideUp();
     }
   });
+
 
 
 });
